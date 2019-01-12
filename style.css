@@ -1,0 +1,36 @@
+ html {
+    font-size: 1em;
+    color: lightgrey;
+}
+
+body {
+    line-height: auto;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: grid;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100vh - 4rem);
+    animation-name: spin;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+     font-size: 3rem;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes depth {
+  0% { text-shadow: 0 0 black; }
+  25% { text-shadow: 1px 0 black, 2px 0 black, 3px 0 black, 4px 0 black, 5px 0 black; }
+  50% { text-shadow: 0 0 black; }
+  75% { text-shadow: -1px 0 black, -2px 0 black, -3px 0 black, -4px 0 black, -5px 0 black; }
+  100% { text-shadow: 0 0 black; }
+}
